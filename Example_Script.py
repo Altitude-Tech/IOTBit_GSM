@@ -8,6 +8,6 @@ GSM = Modem(APN,'GSM')
 
 
 
-GSM.sendATcmdUART_T('AT+CPIN?',1000)   #check SIM
+GSM.sendATcmdUART('AT+CPIN?',1000)   #check SIM
 
 print (GSM.response)
