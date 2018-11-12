@@ -44,7 +44,7 @@ try:
     #filename = raw_input("Please enter the firmware filename, including path: ")
 
     # Run stm32loader to upload new firmware
-    output = "python stm32loader.py -e -w -v -p " + port + " -b 115200 IOTBitFirmware_GSM_V1.02.bin"
+    output = "python stm32loader.py -e -w -v -p " + port + " -b 115200 IOTBitFirmware_GSM_V1.52.bin"
     
     os.system(output)
 
