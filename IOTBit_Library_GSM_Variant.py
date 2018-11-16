@@ -123,7 +123,6 @@ class Modem:
         
         # Modify the ATcmd so that it has the end of line character
         cmd = ATcmd + self.end
-        Timeout = 
         
         # Wait for modem to be ready
         ready = ""
@@ -164,9 +163,9 @@ class Modem:
         
         # Wait for modem to be ready
         ready = ""
-        ready = self.PassthroughPort.readline().decode("utf-8")
-        T = 'P'
+        ready = self.PassthroughPort.readline().decode("utf-8"
         if 'Modem Ready' in ready:
+            T = 'P'
             self.PassthroughPort.write(T.encode())
             SendTimeout = ""
             SendTimeout = self.PassthroughPort.readline().decode("utf-8")
