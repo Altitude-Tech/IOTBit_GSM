@@ -163,7 +163,7 @@ class Modem:
         
         # Wait for modem to be ready
         ready = ""
-        ready = self.PassthroughPort.readline().decode("utf-8"
+        ready = self.PassthroughPort.readline().decode("utf-8")
         if 'Modem Ready' in ready:
             T = 'P'
             self.PassthroughPort.write(T.encode())
@@ -191,14 +191,7 @@ class Modem:
                         while (bytestoread == 0) or ((Getmills()-curtime)<Timeout):
                             bytestoread = self.PassthroughPort.inWaiting()
                             time.sleep(0.01)
-                        '''
-                        while (bytestoread == 0) and ((Getmills()-curtime)<Timeout):
-                            bytestoread = self.PassthroughPort.inWaiting()
-                            time.sleep(1)
-                        while (bytestoread == 0) and ((Getmills()-curtime)<Timeout):
-                            bytestoread = self.PassthroughPort.inWaiting()
-                            time.sleep(1)
-                            '''
+
                         # Store the response
                         print(bytestoread)
                         #self.response = self.PassthroughPort.readline().decode("utf-8")
